@@ -3,9 +3,11 @@ import React from 'react';
 export default class Header extends React.Component {
     render() {
         return (
-            <h1>
-            React super todos app  yeah!!
+            <div className="col-12">
+            <h1 className="display-1 p-3">
+            To Do's:
             </h1>
+            </div>
 
         );
 

@@ -12,9 +12,9 @@ export default class TodoItem extends React.Component {
 
   render() {
     return (
-      <div className="todoWrapper">
-        <button className="removeTodo" onClick={(e) => this.removeTodo(this.props.id)}>remove</button>{this.props.todo.text}
-      </div>
+      <li className="todoWrapper list-group-item">
+      <p className="font-weight-bold"> {this.props.todo.text} </p> <button className="removeTodo btn btn-sm btn-outline-danger" onClick={(e) => this.removeTodo(this.props.id)}>remove</button> 
+      </li>
     );
   }
 }

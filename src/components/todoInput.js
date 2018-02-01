@@ -13,7 +13,7 @@ export default class TodoInput extends React.Component {
     }
 
     handleChange(e) {
-        this.setState({value: e.target.value});
+        this.setState({ value: e.target.value });
     }
 
     addTodo(todo) {
@@ -29,9 +29,14 @@ export default class TodoInput extends React.Component {
 
     render() {
         return (
-            <div>
-                <input type="text" value={this.state.value} onChange={this.handleChange} />
-                <button className="btn btn-primary" onClick={() => this.addTodo(this.state.value)}> Submit </button>
+            <div className="col-12">
+                <div className="input-group m-3 ">
+                    <div className="input-group-prepend">
+                        <span className="input-group-text" id="basic-addon1">New to do</span>
+                    </div>
+                    <input className="input-group-text " type="text" value={this.state.value} onChange={this.handleChange} />
+                    <button className="btn btn-secondary" onClick={() => this.addTodo(this.state.value)}> Submit </button>
+                </div>
             </div>
         );
 
